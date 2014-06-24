@@ -1,0 +1,15 @@
+<div class='queue'>
+  <div class='meta'>
+    <b class='title'> 
+      <span class='pending' ng-bind='length'></span>
+      <span ng-bind='queue.name'></span>
+    </b> 
+  </div>
+  <div class='bin'>
+    <div ng-repeat='(name, task) in tasks' 
+      hopper-task='tasks.$child(name)' task-id='name'></div>
+    <div class='task' ng-click='addTask()'>
+      <a><i class='fa fa-plus'></i>New task</a> 
+    </div>
+  </div>
+</div>

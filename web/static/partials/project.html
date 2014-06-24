@@ -1,0 +1,10 @@
+<a class='project' href='#/project/{{project.name}}'>
+  <h3 ng-bind='project.name'></h3> 
+  <div class='divider'></div>
+  <div class='users'>
+    <img src='user.avatar' ng-repeat='user in project.users'/>
+    <div class='hint' ng-hide='project.users'>
+      No users have worked on this project
+    </div>
+  </div>
+</a>

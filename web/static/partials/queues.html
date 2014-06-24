@@ -1,0 +1,9 @@
+<div class='button' ng-click='create()'>
+  <i class='fa fa-plus'></i> 
+  New queue
+</div>
+
+<div class='queues'>
+  <div ng-repeat='(name, queue) in queues' 
+    hopper-queue='queues.$child(name)' queue-id='name'></div>
+</div>

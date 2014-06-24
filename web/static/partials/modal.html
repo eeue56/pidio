@@ -1,0 +1,12 @@
+<div class='modal' ng-show='visible'>
+  <i class='fa fa-times' ng-click='exit()'></i>
+  <b class='title' ng-bind='modal.title'></b>
+  <div class='message' ng-bind='modal.message'></div>
+  <input type='text' ng-model='input'/>
+  <div class='options'>
+    <button class='button' 
+      ng-repeat='(key, option) in modal.options'
+      ng-click='option(input); exit()'
+      ng-bind='key | capitalize'></button> 
+  </div>
+</div>

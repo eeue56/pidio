@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/eeue56/pidio",
+  "authors": [
+    "danprince <=>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.3.0",
+    "angular": "~1.2.18",
+    "angular-route": "~1.2.18",
+    "font-awesome": "~4.1.0"
+  }
+}
