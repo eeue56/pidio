@@ -37,6 +37,9 @@ def toggle(*args, **kwargs):
     global is_paused
     is_paused = not is_paused
 
+@get('/state')
+def state(*args, **kwargs):
+    return dumps(is_paused)
 
 @get('/search', ['text'])
 def search(*args, **kwargs):
