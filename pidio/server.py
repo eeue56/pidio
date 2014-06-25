@@ -1,4 +1,6 @@
-from wrapper import get, run
+from justcolumns.wrapper import get, run
+
+from json import dumps
 
 
 songs = []
@@ -8,13 +10,17 @@ is_paused = False
 def f(*args, **kwargs):
     return '<html><head></head><body><h1>Hello!</h1></body></html>'
 
-@get('/add', 'track')
+@get('/add', ['track'])
 def add_track(*args, **kwargs):
     global songs
 
     arguments = kwargs['arguments']
     track = arguments['track'][0]
     songs.append(track)
+
+@get('/list')
+def list_songs(*args, **kwargs):
+    return dumps(songs)
 
 @get('/pause')
 def pause(*args, **kwargs):
@@ -30,6 +36,16 @@ def play(*args, **kwargs):
 def toggle(*args, **kwargs):
     global is_paused
     is_paused = not is_paused
+
+
+@get('/search', ['text'])
+def search(*args, **kwargs):
+    arguments = kwargs['arguments']
+    text = arguments['text'][0]
+
+
+
+    return 
 
 
 

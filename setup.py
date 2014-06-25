@@ -28,9 +28,9 @@ setup(
     license=license,
     description='',
     long_description=readme,
-    requires=['just-columns', 'tornado'],
+    requires=['justcolumns', 'tornado'],
     install_requires=[
+        'justcolumns',
         'tornado >= 2.2.0',
-        'just-columns'
     ]
 )
