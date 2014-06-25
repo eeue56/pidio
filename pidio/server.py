@@ -43,8 +43,6 @@ def search(*args, **kwargs):
     arguments = kwargs['arguments']
     text = arguments['text'][0]
 
-
-
     return 
 
 
