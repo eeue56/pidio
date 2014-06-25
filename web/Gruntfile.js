@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         },
         options: {
           transform: ['liveify'],
+          extensions: ['.ls'],
           debug: true
         }
       }
